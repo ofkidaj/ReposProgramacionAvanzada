@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdminPersonasModel.DAL
 {
-    public class PersonasDAL
+    public class PersonasDALObjetos : IPersonasDAL
     {
         //1. crear lista para guardar personas
 

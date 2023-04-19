@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibreriaMaquinas.DTO
+namespace Proyecto2
 {
-    internal class Class1
+    public class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }
