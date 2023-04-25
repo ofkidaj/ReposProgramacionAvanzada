@@ -36,6 +36,7 @@ namespace Proyecto2
             }
             else
             {
+                //probando
                 Console.WriteLine("Error, el puerto {0} esta en uso",puerto);
             }
         }
