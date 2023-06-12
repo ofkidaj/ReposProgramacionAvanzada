@@ -21,22 +21,24 @@ namespace Medidores.Comunicacion
         {
 
             clienteCom.Escribir("Ingresar numero de medidor : ");
-            string nroMedidor = clienteCom.Leer();
-            clienteCom.Escribir("Ingrese fecha");
-            string fecha = clienteCom.Leer();
-            clienteCom.Escribir("Ingrese valor del consumo");
-            string valorConsumo = clienteCom.Leer();
-            Medidor medidor = new Medidor()
-            {
-                NroMedidor = nroMedidor,
-                Fecha = fecha,
-                ValorConsumo = valorConsumo
-            };
-            lock (medidorDAL)
-            {
-                medidorDAL.AgregarMedidor(medidor);
+            if(int.TryParse(clienteCom.Leer(), out int nroMedidor)) {
+                clienteCom.Escribir("Ingrese valor del consumo");
+                if(double.TryParse(clienteCom.Leer(),out double valorConsumo)) {
+                    DateTime datetime = new DateTime();
+                    datetime = DateTime.Now;
+                    Medidor medidor = new Medidor()
+                    {
+                        NroMedidor = nroMedidor,
+                        Fecha = datetime.ToString("yyyy-MM-dd-HH-mm-ss"),
+                        ValorConsumo = valorConsumo
+                    };
+                    lock (medidorDAL)
+                    {
+                        medidorDAL.AgregarMedidor(medidor);
+                    }
+                }
             }
-
+            
             clienteCom.Desconectar();
         }
     }

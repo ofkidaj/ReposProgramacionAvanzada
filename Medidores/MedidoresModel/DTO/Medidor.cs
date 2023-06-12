@@ -18,7 +18,7 @@ namespace MedidoresModel
 
         public override string ToString()
         {
-            return nroMedidor + "" + fecha + "" + valorConsumo;
+            return "\n" + nroMedidor + "|" + fecha + "|" + valorConsumo;
         }
     }
     

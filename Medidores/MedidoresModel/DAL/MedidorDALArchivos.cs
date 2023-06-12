@@ -54,9 +54,9 @@ namespace MedidoresModel
                             string[] arr = texto.Trim().Split('|');
                             Medidor medidor = new Medidor()
                             {
-                                NroMedidor = arr[0],
+                                NroMedidor = int.Parse(arr[0]),
                                 Fecha = arr[1],
-                                ValorConsumo = arr[2]
+                                ValorConsumo = double.Parse(arr[2])
                             };
                             lista.Add(medidor);
                         }
