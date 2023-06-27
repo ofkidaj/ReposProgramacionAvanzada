@@ -1,4 +1,4 @@
-﻿using StarCapModel.DTO;
+﻿using StarCapModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +11,12 @@ namespace StarCapModel
     {
         private string rut;
         private string nombre;
-        private string nivel;
+        private int nivel;
         private Bebida bebidaFavorita;
 
         public string Rut { get => rut; set => rut = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public string Nivel { get => nivel; set => nivel = value; }
+        public int Nivel { get => nivel; set => nivel = value; }
+        public Bebida BebidaFavorita { get => bebidaFavorita; set => bebidaFavorita = value; }
     }
 }
