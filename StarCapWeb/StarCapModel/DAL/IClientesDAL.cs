@@ -10,5 +10,9 @@ namespace StarCapModel
     {
         List<Cliente> Obtener();
         void Agregar(Cliente cliente);
+
+        void Eliminar(string rut);
+    
     }
+
 }
