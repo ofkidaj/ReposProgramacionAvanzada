@@ -64,18 +64,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="IngresarLectura.aspx" />
+    <Content Include="InsertarMedidor.aspx" />
+    <Content Include="MostrarLecturas.aspx" />
+    <Content Include="VerMedidor.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IngresarLectura.aspx.cs">
+      <DependentUpon>IngresarLectura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IngresarLectura.aspx.designer.cs">
+      <DependentUpon>IngresarLectura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarMedidor.aspx.cs">
+      <DependentUpon>InsertarMedidor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertarMedidor.aspx.designer.cs">
+      <DependentUpon>InsertarMedidor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarLecturas.aspx.cs">
+      <DependentUpon>MostrarLecturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarLecturas.aspx.designer.cs">
+      <DependentUpon>MostrarLecturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerMedidor.aspx.cs">
+      <DependentUpon>VerMedidor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerMedidor.aspx.designer.cs">
+      <DependentUpon>VerMedidor.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Principal.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MedidoresIntModel\MedidoresIntModel.csproj">
+      <Project>{B8D44299-1E05-4ABE-A346-5102B808E216}</Project>
+      <Name>MedidoresIntModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
